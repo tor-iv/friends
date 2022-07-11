@@ -33,11 +33,11 @@ def main():
     num = randint(0,len(lottery_list)-1)
     message = client.messages \
         .create( 
-            body="Tor! You should text:" + lottery_list[num] +
-                "\ Your goal of the day is" + goals[Day] +
-                "\n Your goal of the week is: " + goals[Week] + 
-                "\n Your goal of the year is: " + goals[Year] + 
-                "\n Your goal of 5 years is: " + goals[5-Years].map(),
+            body="\n\n Tor! You should text: " + lottery_list[num] +
+                "\n\nYour goal of the day is: " + goals["Day"] +
+                "\n\nYour goal of the week is: " + goals["Week"] + 
+                "\n\nYour goal of the year is: " + goals["Year"] + 
+                "\n\nYour goal of 5 years is: " + ("\n\t-").join(goals["5-Years"]),
             from_='+19793645040',
             to='+1 651 955 9920'
         )
